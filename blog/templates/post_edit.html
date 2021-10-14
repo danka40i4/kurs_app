@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<h2>new post</h2>
+
+<form method="post">
+{%csrf_token%}
+
+{{from.as_p}}
+
+<button type="submit">safe</button>
+</form>
+
+{%endblock%}

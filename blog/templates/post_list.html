@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{%block content%}
+{%for post in posts%}
+
+<p>
+published: <a href="{% url 'post_detail' pk=post.pk %}">{{post.published_date}}</a> <br>
+author: {{post.author}} <br>
+title: {{post.title}} <br>
+text: {{post.text}} <br>
+
+</p>
+
+{%endfor%}
+{%endblock%}

@@ -1,0 +1,25 @@
+{%load static%}
+
+<html>
+<head>
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel='stylesheet' href="{% static 'css/blog.css' %}">
+</head>
+
+
+<body>
+
+<p>
+{% if user.is_authenticated%}
+<a href="{%url 'post_new'%}">dodaj</a>
+{%endif%}
+</p>
+
+{%block content%}
+{%endblock%}
+
+</body>
+
+</html>
+
